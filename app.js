@@ -17,9 +17,8 @@ app.use(express.static(__dirname +'/public'));
 //Creates the database entry
 app.get('/new/:urlToShorten(*)', function(req, res, next){
 var urlToShorten = req.params.urlToShorten;
-//Regex for url (change expression to regex and just use regex)
-var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
-var regex = expression;
+//Regex for url
+var regex = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
 if(regex.test(urlToShorten)===true){
     var short = Math.floor(Math.random()*100000).toString();
     

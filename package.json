@@ -1,6 +1,10 @@
 {
   "name": "url_short",
   "version": "0.0.0",
+  "engines": {
+    "node":"4.7.3",
+    "npm": "2.15.11"
+  },
   "description": "",
   "main": "app.js",
   "author": "",
